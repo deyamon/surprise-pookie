@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Lucida Fax, sans-serif;
+            background-color: #FA6A6A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            position: relative;
+            width: 600px;
+            height: 500px;
+            background-color: #E8CBA2;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #ff4d4d;
+            transition: transform 0.5s ease, color 0.3s ease;
+        }
+        .card:hover .heart {
+            transform: scale(3.1);
+            color: #ff1a1a;
+	    opacity: 100;
+        }
+        .message {
+            position: absolute;
+            top: 50%;
+            left: 53%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            color: #333;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .card.open .message {
+            opacity: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="heart">❤️</div>
+        <div class="message">
+            <B><I>Happy Valentine's Day!<Br>Beiiiby </I>✨</B><br>
+	    <B><I>I'll always love u until our hairs turn grey</I></B>🤭
+	    <br><br><br><br><br><br><br><br><br><br><B><u>Tap on the heart 🙈
+	    </u></B>
+        </div>
+    </div>
+    <script>
+        const card = document.querySelector('.card');
+        card.addEventListener('click', () => {
+            card.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
